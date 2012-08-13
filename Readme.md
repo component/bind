@@ -1,7 +1,7 @@
 
 # bind
 
-  Function binding utiliy.
+  Function binding utility.
 
 ## API
 
