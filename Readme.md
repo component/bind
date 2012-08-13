@@ -3,6 +3,12 @@
 
   Function binding utility.
 
+## Installation
+
+```
+$ component install component/bind
+```
+
 ## API
 
    - [bind(obj, fn)](#bindobj-fn)
