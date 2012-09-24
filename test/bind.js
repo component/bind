@@ -24,6 +24,16 @@ describe('bind(obj, fn, ...)', function(){
     bind(null, add, 1)(2).should.equal(3);
     bind(null, add, 1, 2)().should.equal(3);
   })
+
+  it('should keep the arguments in order', function(){
+    function add(a, b) {
+      return a + b;
+    }
+
+    bind(null, add)('1', '2').should.equal('12');
+    bind(null, add, '1')('2').should.equal('12');
+    bind(null, add, '1', '2')().should.equal('12');
+  })
 })
 
 describe('bind(obj, name)', function(){
