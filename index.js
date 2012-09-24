@@ -19,6 +19,6 @@ module.exports = function(obj, fn){
   if ('function' != typeof fn) throw new Error('bind() requires a function');
   var args = [].slice.call(arguments, 2);
   return function(){
-    return fn.apply(obj, slice.call(arguments).concat(args));
+    return fn.apply(obj, args.concat(slice.call(arguments)));
   }
 };
