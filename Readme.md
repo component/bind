@@ -1,4 +1,3 @@
-
 # bind
 
   Function binding utility.
@@ -14,9 +13,9 @@ $ component install component/bind
    - [bind(obj, fn)](#bindobj-fn)
    - [bind(obj, fn, ...)](#bindobj-fn-)
    - [bind(obj, name)](#bindobj-name)
-<a name="" />
+<a name=""></a>
  
-<a name="bindobj-fn" />
+<a name="bindobj-fn"></a>
 ### bind(obj, fn)
 should bind the function to the given object.
 
@@ -31,7 +30,7 @@ var fn = bind(tobi, name);
 fn().should.equal('tobi');
 ```
 
-<a name="bindobj-fn-" />
+<a name="bindobj-fn-"></a>
 ### bind(obj, fn, ...)
 should curry the remaining arguments.
 
@@ -45,7 +44,7 @@ bind(null, add, 1)(2).should.equal(3);
 bind(null, add, 1, 2)().should.equal(3);
 ```
 
-<a name="bindobj-name" />
+<a name="bindobj-name"></a>
 ### bind(obj, name)
 should bind the method of the given name.
 
