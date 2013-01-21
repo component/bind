@@ -4,5 +4,9 @@
   "devDependencies": {
     "mocha": "*",
     "should": "*"
-  }
+  },
+  "dependencies": {
+		"sliced": "*",
+		"contains": "https://github.com/Nami-Doc/contains/tarball/master"
+	}
 }

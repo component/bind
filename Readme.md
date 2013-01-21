@@ -9,14 +9,13 @@ $ component install component/bind
 ```
 
 ## API
-
    - [bind(obj, fn)](#bindobj-fn)
    - [bind(obj, fn, ...)](#bindobj-fn-)
    - [bind(obj, name)](#bindobj-name)
 <a name=""></a>
  
 <a name="bindobj-fn"></a>
-### bind(obj, fn)
+# bind(obj, fn)
 should bind the function to the given object.
 
 ```js
@@ -31,21 +30,31 @@ fn().should.equal('tobi');
 ```
 
 <a name="bindobj-fn-"></a>
-### bind(obj, fn, ...)
+# bind(obj, fn, ...)
 should curry the remaining arguments.
 
 ```js
-function add(a, b) {
-  return a + b;
-}
-
 bind(null, add)(1, 2).should.equal(3);
 bind(null, add, 1)(2).should.equal(3);
 bind(null, add, 1, 2)().should.equal(3);
 ```
 
+should keep the arguments in order.
+
+```js
+bind(null, add)('1', '2').should.equal('12');
+bind(null, add, '1')('2').should.equal('12');
+bind(null, add, '1', '2')().should.equal('12');
+```
+
+should replace placeholders.
+
+```js
+bind(null, add, bind.PH, 2)(1).should.equal(3)
+```
+
 <a name="bindobj-name"></a>
-### bind(obj, name)
+# bind(obj, name)
 should bind the method of the given name.
 
 ```js
@@ -58,6 +67,7 @@ tobi.getName = function() {
 var fn = bind(tobi, 'getName');
 fn().should.equal('tobi');
 ```
+
 
 ## License 
 

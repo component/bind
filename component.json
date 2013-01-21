@@ -3,6 +3,9 @@
   "version": "0.0.1",
   "description": "function binding utility",
   "keywords": ["bind", "utility"],
-  "dependencies": {},
+  "dependencies": {
+  		"aheckmann/sliced": "*",
+  		"Nami-Doc/contains":"*"
+  	},
   "scripts": ["index.js"]
 }
