@@ -15,24 +15,24 @@ describe('bind(obj, fn)', function(){
 })
 
 describe('bind(obj, fn, ...)', function(){
+  function add(a, b) {
+    return a + b;
+  }
+  
   it('should curry the remaining arguments', function(){
-    function add(a, b) {
-      return a + b;
-    }
-
     bind(null, add)(1, 2).should.equal(3);
     bind(null, add, 1)(2).should.equal(3);
     bind(null, add, 1, 2)().should.equal(3);
   })
 
   it('should keep the arguments in order', function(){
-    function add(a, b) {
-      return a + b;
-    }
-
     bind(null, add)('1', '2').should.equal('12');
     bind(null, add, '1')('2').should.equal('12');
     bind(null, add, '1', '2')().should.equal('12');
+  })
+
+  it('should replace placeholders', function () {
+    bind(null, add, bind.PH, 2)(1).should.equal(3)    
   })
 })
 
