@@ -1,8 +1,13 @@
 {
-  "name": "bind",
+  "name": "bind-component",
   "version": "0.0.1",
   "devDependencies": {
     "mocha": "*",
     "should": "*"
+  },
+  "component": {
+    "scripts": {
+      "bind/index.js": "index.js"
+    }
   }
 }
