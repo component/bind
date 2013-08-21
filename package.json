@@ -9,5 +9,9 @@
     "scripts": {
       "bind/index.js": "index.js"
     }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/component/bind.git"
   }
 }
