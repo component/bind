@@ -2,6 +2,7 @@
   "name": "component-bind",
   "version": "1.0.0",
   "description": "function binding utility",
+  "license": "MIT",
   "keywords": [
     "bind",
     "utility"
